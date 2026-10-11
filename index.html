@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Órbita — Un recorrido para conocerte</title>
+<meta name="description" content="Orientación basada en instrumentos validados para adolescentes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="sky"></div>
+
+  <!-- Paisaje -->
+  <svg class="scenery" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#FFE7AE"/><stop offset="0.55" stop-color="#FFC24B"/>
+        <stop offset="1" stop-color="#FF9E5E" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="hillA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A468F"/><stop offset="1" stop-color="#353174"/></linearGradient>
+      <linearGradient id="hillB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#332F6B"/><stop offset="1" stop-color="#221F4E"/></linearGradient>
+      <linearGradient id="hillC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#221E48"/><stop offset="1" stop-color="#14122F"/></linearGradient>
+    </defs>
+    <g class="stars" fill="#FFF" opacity=".85">
+      <circle cx="140" cy="80" r="2"/><circle cx="330" cy="130" r="1.6"/>
+      <circle cx="520" cy="60" r="2.2"/><circle cx="700" cy="120" r="1.4"/>
+      <circle cx="860" cy="70" r="2"/><circle cx="1010" cy="150" r="1.6"/>
+      <circle cx="240" cy="210" r="1.4"/><circle cx="620" cy="200" r="1.7"/>
+      <circle cx="960" cy="40" r="1.5"/><circle cx="1120" cy="110" r="2"/>
+    </g>
+    <circle class="sun" cx="905" cy="315" r="180" fill="url(#sun)"/>
+    <circle cx="905" cy="315" r="62" fill="#FFE7AE"/>
+    <g class="cloud" fill="#FFF" opacity=".34"><ellipse cx="230" cy="250" rx="70" ry="26"/><ellipse cx="290" cy="240" rx="52" ry="22"/><ellipse cx="185" cy="242" rx="42" ry="18"/></g>
+    <g class="cloud b" fill="#FFF" opacity=".26"><ellipse cx="760" cy="180" rx="90" ry="30"/><ellipse cx="840" cy="170" rx="60" ry="24"/><ellipse cx="700" cy="172" rx="48" ry="20"/></g>
+    <g class="cloud c" fill="#FFF" opacity=".2"><ellipse cx="450" cy="120" rx="60" ry="20"/><ellipse cx="510" cy="112" rx="40" ry="16"/></g>
+    <path d="M0 470 C 170 400, 320 470, 500 452 C 700 432, 860 470, 1020 448 C 1120 434, 1180 452, 1200 446 L1200 800 L0 800 Z" fill="url(#hillA)"/>
+    <path d="M0 560 C 220 500, 420 580, 640 556 C 860 532, 1040 592, 1200 552 L1200 800 L0 800 Z" fill="url(#hillB)"/>
+    <path d="M0 662 C 260 616, 520 700, 780 668 C 980 644, 1120 700, 1200 672 L1200 800 L0 800 Z" fill="url(#hillC)"/>
+    <g fill="#191733">
+      <path d="M150 600 l16 -38 l16 38 z M150 620 l16 -30 l16 30 z"/>
+      <path d="M940 612 l15 -36 l15 36 z M940 630 l15 -28 l15 28 z"/>
+      <path d="M1080 640 l14 -32 l14 32 z M1080 656 l14 -26 l14 26 z"/>
+      <path d="M60 660 l13 -30 l13 30 z"/>
+    </g>
+  </svg>
+
+  <!-- Símbolos -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="ship" viewBox="0 0 150 120">
+      <path d="M75 8 C 100 8, 114 30, 114 50 L36 50 C36 30, 50 8, 75 8 Z" fill="#7FD3FF"/>
+      <path d="M75 14 C 93 14, 105 30, 105 48 L75 48 Z" fill="#C7EEFF" opacity=".85"/>
+      <ellipse cx="75" cy="58" rx="62" ry="20" fill="#B9BCD8"/>
+      <ellipse cx="75" cy="54" rx="62" ry="18" fill="#E8EAF7"/>
+      <ellipse cx="75" cy="60" rx="44" ry="10" fill="#B4B7D4"/>
+      <circle class="light"   cx="30" cy="60" r="5.5" fill="#FFC24B"/>
+      <circle class="light l2" cx="54" cy="65" r="5.5" fill="#FF8A3D"/>
+      <circle class="light l3" cx="96" cy="65" r="5.5" fill="#FF8A3D"/>
+      <circle class="light l4" cx="120" cy="60" r="5.5" fill="#FFC24B"/>
+      <path d="M56 76 L94 76 L82 102 L68 102 Z" fill="#FFE7AE" opacity=".55"/>
+    </symbol>
+
+    <symbol id="panda" viewBox="0 0 120 120">
+      <circle cx="33" cy="30" r="17" fill="#2B2B3A"/>
+      <circle cx="87" cy="30" r="17" fill="#2B2B3A"/>
+      <circle cx="33" cy="30" r="8" fill="#4A4A5E"/>
+      <circle cx="87" cy="30" r="8" fill="#4A4A5E"/>
+      <ellipse cx="60" cy="66" rx="43" ry="39" fill="#FFFFFF"/>
+      <ellipse cx="41" cy="62" rx="14" ry="16.5" fill="#2B2B3A" transform="rotate(-18 41 62)"/>
+      <ellipse cx="79" cy="62" rx="14" ry="16.5" fill="#2B2B3A" transform="rotate(18 79 62)"/>
+      <circle cx="43" cy="63" r="4.6" fill="#fff"/>
+      <circle cx="77" cy="63" r="4.6" fill="#fff"/>
+      <ellipse cx="60" cy="83" rx="8.5" ry="6" fill="#2B2B3A"/>
+      <path d="M51 92c2.4 3.2 15.6 3.2 18 0" stroke="#2B2B3A" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <circle cx="28" cy="82" r="6.5" fill="#FF9AA8" opacity=".5"/>
+      <circle cx="92" cy="82" r="6.5" fill="#FF9AA8" opacity=".5"/>
+    </symbol>
+
+    <!-- Misma forma, otra señal: es la que NO hay que tocar -->
+    <symbol id="pandaAzul" viewBox="0 0 120 120">
+      <circle cx="33" cy="30" r="17" fill="#1E3A6E"/>
+      <circle cx="87" cy="30" r="17" fill="#1E3A6E"/>
+      <circle cx="33" cy="30" r="8" fill="#2F4F8A"/>
+      <circle cx="87" cy="30" r="8" fill="#2F4F8A"/>
+      <ellipse cx="60" cy="66" rx="43" ry="39" fill="#DCEBFF"/>
+      <ellipse cx="41" cy="62" rx="14" ry="16.5" fill="#2B5CA8" transform="rotate(-18 41 62)"/>
+      <ellipse cx="79" cy="62" rx="14" ry="16.5" fill="#2B5CA8" transform="rotate(18 79 62)"/>
+      <circle cx="43" cy="63" r="4.6" fill="#fff"/>
+      <circle cx="77" cy="63" r="4.6" fill="#fff"/>
+      <ellipse cx="60" cy="83" rx="8.5" ry="6" fill="#1E3A6E"/>
+      <path d="M51 92c2.4 3.2 15.6 3.2 18 0" stroke="#1E3A6E" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <circle cx="28" cy="82" r="6.5" fill="#7FB2FF" opacity=".6"/>
+      <circle cx="92" cy="82" r="6.5" fill="#7FB2FF" opacity=".6"/>
+    </symbol>
+
+    <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.6l2.9 5.9 6.5.95-4.7 4.58 1.1 6.47L12 17.55 6.2 20.5l1.1-6.47-4.7-4.58 6.5-.95z" fill="#5A3D00"/></symbol>
+    <symbol id="flag" viewBox="0 0 24 24"><path d="M6 3v18h2v-7l9-1.5v-6L8 8V3z" fill="#1E5B2A"/></symbol>
+  </svg>
+
+  <div class="fx" id="fx"></div>
+
+  <div class="stage" id="stage">
+
+    <!-- ============ VISTA: INICIO ============ -->
+    <section class="view vIntro active" id="vIntro">
+      <svg class="intro-hero" viewBox="0 0 120 120" aria-hidden="true"><g class="float"><use href="#panda"/></g></svg>
+      <h1 class="intro-title">Órbita</h1>
+      <p class="intro-sub">Un recorrido para conocerte un poco más</p>
+
+      <div class="intro-card">
+        <p>Tres tramos con <strong><span id="introN">30</span> escenas del día a día</strong> y <strong><span id="introJ">5</span> juegos cortos</strong>. Tardás unos <strong>12 minutos</strong>.</p>
+        <p>Las escenas son situaciones reales: leé y elegí lo que más se parezca a vos. No hay respuestas correctas ni incorrectas.</p>
+        <div class="chips" id="introChips"></div>
+      </div>
+
+      <div class="actions" style="margin-top:18px">
+        <button class="go" id="startBtn">Empezar el recorrido</button>
+      </div>
+      <p class="intro-foot">Orientación basada en instrumentos validados.</p>
+    </section>
+
+    <!-- ============ VISTA: PARADA DE TRAMO ============ -->
+    <section class="view vParada" id="vParada">
+      <div class="parada-card">
+        <div class="parada-ico" id="paradaIco">⚡</div>
+        <div class="parada-kicker" id="paradaKicker"></div>
+        <h2 class="parada-titulo" id="paradaTitulo"></h2>
+        <p class="parada-texto" id="paradaTexto"></p>
+        <div class="parada-meta" id="paradaMeta"></div>
+        <p class="parada-nota" id="paradaNota"></p>
+      </div>
+      <div class="actions" style="margin-top:20px">
+        <button class="go" id="paradaBtn">Empezar el tramo</button>
+      </div>
+    </section>
+
+    <!-- ============ VISTA: TEST ============ -->
+    <section class="view" id="vTest">
+      <header class="hud">
+        <button id="closeBtn" aria-label="Salir">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <div class="progress"><i id="progressFill"></i></div>
+        <div class="streak" id="streak">
+          <svg viewBox="0 0 24 24" fill="#5A3D00"><path d="M12 2.6l2.9 5.9 6.5.95-4.7 4.58 1.1 6.47L12 17.55 6.2 20.5l1.1-6.47-4.7-4.58 6.5-.95z"/></svg>
+          <span id="counter">1/33</span>
+        </div>
+      </header>
+
+      <div class="trail-wrap">
+        <div class="trail" id="trail"></div>
+      </div>
+
+      <!-- ---- Modo pregunta ---- -->
+      <div class="play" id="play">
+        <section class="quiz">
+          <div class="quiz-row">
+            <svg class="companion" aria-hidden="true"><g class="float"><use href="#panda"/></g></svg>
+            <div class="bubble-wrap">
+              <div class="bubble" id="bubble">
+                <span class="tag" id="tag">Tramo 1</span>
+                <p class="scene" id="scene"></p>
+                <p class="question" id="question"></p>
+                <p class="hint" id="hint"></p>
+                <svg class="tail-left" viewBox="0 0 22 40" aria-hidden="true"><path d="M22 2 C 20 16, 12 24, 3 38 C 9 22, 9 12, 22 2 Z" fill="#FFFFFF"/></svg>
+                <svg class="tail-top" viewBox="0 0 48 22" aria-hidden="true"><path d="M2 22 C 8 6, 22 2, 46 4 C 28 6, 16 12, 12 22 Z" fill="#FFFFFF"/></svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="controls" id="controls">
+          <div class="answers dial" id="answers" role="radiogroup"></div>
+          <button class="escapa" id="escapaBtn" hidden>Nunca estuve en una situación así</button>
+        </div>
+
+        <footer class="actions">
+          <button class="go" id="goBtn" disabled>Continuar</button>
+        </footer>
+      </div>
+
+      <!-- ---- Modo juego ---- -->
+      <div class="task-wrap" id="taskWrap" hidden>
+        <div class="task-card">
+          <div class="task-head">
+            <span class="tag" id="taskTag">Juego</span>
+            <h3 class="task-title" id="taskTitle"></h3>
+          </div>
+          <div class="task-body" id="taskBody"></div>
+          <div class="task-foot" id="taskFoot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VISTA: RESULTADO ============ -->
+    <section class="view vResult" id="vResult">
+      <div class="result-head">
+        <h2>Tu recorrido</h2>
+        <p id="resultSub">Estas son las señales que aparecieron en cada tramo.</p>
+      </div>
+
+      <div class="res-top">
+        <div class="radar-card" id="radarCard"></div>
+        <div class="res-col">
+          <div class="verdict" id="verdict"></div>
+          <div class="vnote" id="vNote" hidden></div>
+        </div>
+      </div>
+
+      <div class="dom-list" id="domList"></div>
+
+      <div class="juegos" id="juegos" hidden></div>
+
+      <div class="result-actions">
+        <button class="soft" id="restartBtn">Volver a empezar</button>
+      </div>
+
+      <div class="sources" id="sources">
+        <button id="sourcesBtn">
+          Acerca de las fuentes
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="src-body" id="srcBody"></div>
+      </div>
+
+      <p class="note">Esta orientación se basa en instrumentos validados y no reemplaza una evaluación profesional. Si algo te preocupa, hablalo con un adulto de confianza.</p>
+    </section>
+
+  </div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
